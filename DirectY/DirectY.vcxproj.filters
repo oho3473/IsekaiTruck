@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="DirectY">
+      <UniqueIdentifier>{fd24ab56-56d5-4bb2-bd02-fa2038eaf2c4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Transform">
+      <UniqueIdentifier>{96ec360f-6ba7-481d-b1a9-30569b5601de}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Motion">
+      <UniqueIdentifier>{5ebc3e71-70d9-4342-bbe7-7d0c30d0ba36}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Paticle">
+      <UniqueIdentifier>{bf294b82-2f78-4a77-932c-f5d389e0c8f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PaticleManager">
+      <UniqueIdentifier>{e5b69afb-0afa-46c8-804b-b0146676140c}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="DirectY.h">
+      <Filter>DirectY</Filter>
+    </ClInclude>
+    <ClInclude Include="MakeMatrix.h">
+      <Filter>Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Sprite.h">
+      <Filter>Motion</Filter>
+    </ClInclude>
+    <ClInclude Include="Paticle.h">
+      <Filter>Paticle</Filter>
+    </ClInclude>
+    <ClInclude Include="PaticleMaintain.h">
+      <Filter>PaticleManager</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="DirectY.cpp">
+      <Filter>DirectY</Filter>
+    </ClCompile>
+    <ClCompile Include="MakeMatrix.cpp">
+      <Filter>Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Sprite.cpp">
+      <Filter>Motion</Filter>
+    </ClCompile>
+    <ClCompile Include="Paticle.cpp">
+      <Filter>Paticle</Filter>
+    </ClCompile>
+    <ClCompile Include="PaticleMaintain.cpp">
+      <Filter>PaticleManager</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
