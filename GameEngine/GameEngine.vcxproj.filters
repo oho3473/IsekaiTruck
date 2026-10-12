@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Manager">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Docs">
+      <UniqueIdentifier>{a6c194e1-20d8-4d98-8286-25c506f43572}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Input">
+      <UniqueIdentifier>{1e969853-91c6-4cc8-9cbc-a3328d323287}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Resource">
+      <UniqueIdentifier>{517d24ac-9d33-44b1-9c21-f09662676bbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Sound">
+      <UniqueIdentifier>{b69c1346-5dd1-4f5c-a221-4d9918871b74}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Time">
+      <UniqueIdentifier>{abd8aa0b-def5-4f59-b0e4-d060b6b68d01}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Scene">
+      <UniqueIdentifier>{c91db912-0f8d-4f72-a553-69aec9c839d1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object">
+      <UniqueIdentifier>{42d58139-294a-47d4-9995-fcb540c099b0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element">
+      <UniqueIdentifier>{2cd8d4d1-82a9-48bc-b90c-26c225964eb2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Transform">
+      <UniqueIdentifier>{f4d32b59-941d-4902-b04b-c60f944aac11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Animator">
+      <UniqueIdentifier>{4c90d80b-a67a-456e-8505-d2eab524eeee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Camera">
+      <UniqueIdentifier>{60e4e078-ecc2-496f-aa13-7836bb8eae3b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Collider">
+      <UniqueIdentifier>{10a7515b-8a4a-489a-aa7d-96480151a3d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\GameObject">
+      <UniqueIdentifier>{6f24cb21-10e6-45cb-a05d-cc4904fd89df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Button">
+      <UniqueIdentifier>{7bcd3f68-8e55-46eb-b39b-b19407394e75}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Collision">
+      <UniqueIdentifier>{f3c53206-471a-44bd-91d9-a533340c3912}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Slider">
+      <UniqueIdentifier>{891e747a-5898-4a15-a2cb-26fe4c53c58e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameEngine">
+      <UniqueIdentifier>{8d3fe6f8-d4c8-4b6b-9db0-02114f66de86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\Scrollbar">
+      <UniqueIdentifier>{cecdbbc0-3eda-43e5-a7da-21ebe31f8a9e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Manager\Camera">
+      <UniqueIdentifier>{66cb0704-1d2e-4bd7-b8f2-4d8a9343029a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Object\Element\AudioSource">
+      <UniqueIdentifier>{b58dcc68-17f4-4a78-8a0f-4354804472e2}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="InputManager.cpp">
+      <Filter>Manager\Input</Filter>
+    </ClCompile>
+    <ClCompile Include="ResourceManager.cpp">
+      <Filter>Manager\Resource</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundManager.cpp">
+      <Filter>Manager\Sound</Filter>
+    </ClCompile>
+    <ClCompile Include="TimeManager.cpp">
+      <Filter>Manager\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="SceneManager.cpp">
+      <Filter>Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Scene.cpp">
+      <Filter>Manager\Scene</Filter>
+    </ClCompile>
+    <ClCompile Include="Transform.cpp">
+      <Filter>Object\Element\Transform</Filter>
+    </ClCompile>
+    <ClCompile Include="Animator.cpp">
+      <Filter>Object\Element\Animator</Filter>
+    </ClCompile>
+    <ClCompile Include="Camera.cpp">
+      <Filter>Object\Element\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="Collider.cpp">
+      <Filter>Object\Element\Collider</Filter>
+    </ClCompile>
+    <ClCompile Include="CameraManager.cpp">
+      <Filter>Manager\Camera</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject.cpp">
+      <Filter>Object\GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Button.cpp">
+      <Filter>Object\Element\Button</Filter>
+    </ClCompile>
+    <ClCompile Include="CollisionManager.cpp">
+      <Filter>Manager\Collision</Filter>
+    </ClCompile>
+    <ClCompile Include="Slider.cpp">
+      <Filter>Object\Element\Slider</Filter>
+    </ClCompile>
+    <ClCompile Include="GameEngine.cpp">
+      <Filter>GameEngine</Filter>
+    </ClCompile>
+    <ClCompile Include="Scrollbar.cpp">
+      <Filter>Object\Element\Scrollbar</Filter>
+    </ClCompile>
+    <ClCompile Include="AudioSource.cpp">
+      <Filter>Object\Element\AudioSource</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Singleton.h" />
+    <ClInclude Include="ElementBase.h">
+      <Filter>Object\Element</Filter>
+    </ClInclude>
+    <ClInclude Include="InputManager.h">
+      <Filter>Manager\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="ResourceManager.h">
+      <Filter>Manager\Resource</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundManager.h">
+      <Filter>Manager\Sound</Filter>
+    </ClInclude>
+    <ClInclude Include="TimeManager.h">
+      <Filter>Manager\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="SceneManager.h">
+      <Filter>Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Scene.h">
+      <Filter>Manager\Scene</Filter>
+    </ClInclude>
+    <ClInclude Include="Transform.h">
+      <Filter>Object\Element\Transform</Filter>
+    </ClInclude>
+    <ClInclude Include="Animator.h">
+      <Filter>Object\Element\Animator</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.h">
+      <Filter>Object\Element\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Collider.h">
+      <Filter>Object\Element\Collider</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraManager.h">
+      <Filter>Manager\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="Button.h">
+      <Filter>Object\Element\Button</Filter>
+    </ClInclude>
+    <ClInclude Include="CollisionManager.h">
+      <Filter>Manager\Collision</Filter>
+    </ClInclude>
+    <ClInclude Include="Slider.h">
+      <Filter>Object\Element\Slider</Filter>
+    </ClInclude>
+    <ClInclude Include="GameEngine.h">
+      <Filter>GameEngine</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject.h">
+      <Filter>Object\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Scrollbar.h">
+      <Filter>Object\Element\Scrollbar</Filter>
+    </ClInclude>
+    <ClInclude Include="AudioSource.h">
+      <Filter>Object\Element\AudioSource</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="작업현황.txt">
+      <Filter>Docs</Filter>
+    </Text>
+    <Text Include="프로젝트기록_OHK.txt">
+      <Filter>Docs</Filter>
+    </Text>
+  </ItemGroup>
+</Project>
