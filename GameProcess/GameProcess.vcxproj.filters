@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="EntryPoint">
+      <UniqueIdentifier>{e203b14e-6332-4af4-ac5a-faabe299ffa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="EntryPoint\WinAPI">
+      <UniqueIdentifier>{876c9ae7-3dd7-4775-8d07-db8e96056af9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="GameProcess">
+      <UniqueIdentifier>{09af80e0-e6b2-4689-91f5-2e41188bca62}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script">
+      <UniqueIdentifier>{5fc94e34-eed1-411a-8333-e6a50c1650dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\UI">
+      <UniqueIdentifier>{54ddf36d-734e-4f2f-9215-e70fcf3de868}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Character">
+      <UniqueIdentifier>{0d682e6b-000d-4781-a96e-bd5f157a627f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Tile">
+      <UniqueIdentifier>{762c567c-710e-473c-a5ba-54afec86d7a1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\Character\NPC">
+      <UniqueIdentifier>{984c03da-2722-4af9-a759-b7c792530d7b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\OtherScene">
+      <UniqueIdentifier>{439e9035-70cb-4979-ac31-71b55156b928}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\OtherScene\TitleScene">
+      <UniqueIdentifier>{8064ffca-1f29-482f-8270-ef656fbe4736}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\OtherScene\OpeningScene">
+      <UniqueIdentifier>{869e1209-0f23-4750-99a7-55b755f9c5eb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Debug">
+      <UniqueIdentifier>{80bbe25e-ee85-4129-bdab-80fd59268d0f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\UI\Dialog">
+      <UniqueIdentifier>{991784b4-231b-423d-8d32-eb571d4198ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\OtherScene\StageScene">
+      <UniqueIdentifier>{d578dc7f-04d3-4592-9c3c-b5837deadba6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Clear">
+      <UniqueIdentifier>{5d6c939e-c603-4c7f-8f91-e51ee4d1abbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Script\UI\TargetBar">
+      <UniqueIdentifier>{56a01f0b-3a44-45ef-8c88-776d556e61bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="WinAPIInit.cpp">
+      <Filter>EntryPoint\WinAPI</Filter>
+    </ClCompile>
+    <ClCompile Include="WinMain.cpp">
+      <Filter>EntryPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="GameProcess.cpp">
+      <Filter>GameProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="InGameUI.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="InterviewUI.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="Player.cpp">
+      <Filter>Script\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="TileManager.cpp">
+      <Filter>Script\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="BuildingManager.cpp">
+      <Filter>Script\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="SkinHeadNPC.cpp">
+      <Filter>Script\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="FSM.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="Police.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPC.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="PoliceState.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="TileRenderManager.cpp">
+      <Filter>Script\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="WalkingNPCState.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="SoundOptionUI.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="PathFindRenderer.cpp" />
+    <ClCompile Include="NpcManager.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="NPCWaitManager.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="MessageManager.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="BackgroundImage.cpp">
+      <Filter>Script\OtherScene\TitleScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Credit.cpp">
+      <Filter>Script\OtherScene\OpeningScene</Filter>
+    </ClCompile>
+    <ClCompile Include="DebugManager.cpp">
+      <Filter>Debug</Filter>
+    </ClCompile>
+    <ClCompile Include="MainOption.cpp">
+      <Filter>Script\UI</Filter>
+    </ClCompile>
+    <ClCompile Include="DialogManager.cpp">
+      <Filter>Script\UI\Dialog</Filter>
+    </ClCompile>
+    <ClCompile Include="StageTitle.cpp">
+      <Filter>Script\OtherScene\StageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="ClearManager.cpp">
+      <Filter>Clear</Filter>
+    </ClCompile>
+    <ClCompile Include="LockStage.cpp">
+      <Filter>Script\OtherScene\StageScene</Filter>
+    </ClCompile>
+    <ClCompile Include="Tile.cpp">
+      <Filter>Script\Tile</Filter>
+    </ClCompile>
+    <ClCompile Include="PotraitUI.cpp" />
+    <ClCompile Include="CarNpc.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="CarNPCState.cpp">
+      <Filter>Script\Character\NPC</Filter>
+    </ClCompile>
+    <ClCompile Include="CloudObject.cpp" />
+    <ClCompile Include="TargetBar.cpp">
+      <Filter>Script\UI\TargetBar</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="WinAPIInit.h">
+      <Filter>EntryPoint\WinAPI</Filter>
+    </ClInclude>
+    <ClInclude Include="GameProcess.h">
+      <Filter>GameProcess</Filter>
+    </ClInclude>
+    <ClInclude Include="InGameUI.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="InterviewUI.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Script\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="TileManager.h">
+      <Filter>Script\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="BuildingManager.h">
+      <Filter>Script\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="SkinHeadNPC.h">
+      <Filter>Script\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="FSM.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="BaseState.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="Police.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPC.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="PoliceState.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="TileRenderManager.h">
+      <Filter>Script\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="SoundOptionUI.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="WalkingNPCState.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="PathFindRenderer.h" />
+    <ClInclude Include="NpcManager.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="NPCWaitManager.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="MessageManager.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="BackgroundImage.h">
+      <Filter>Script\OtherScene\TitleScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Credit.h">
+      <Filter>Script\OtherScene\OpeningScene</Filter>
+    </ClInclude>
+    <ClInclude Include="DebugManager.h">
+      <Filter>Debug</Filter>
+    </ClInclude>
+    <ClInclude Include="MainOption.h">
+      <Filter>Script\UI</Filter>
+    </ClInclude>
+    <ClInclude Include="DialogManager.h">
+      <Filter>Script\UI\Dialog</Filter>
+    </ClInclude>
+    <ClInclude Include="StageTitle.h">
+      <Filter>Script\OtherScene\StageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="ClearManager.h">
+      <Filter>Clear</Filter>
+    </ClInclude>
+    <ClInclude Include="LockStage.h">
+      <Filter>Script\OtherScene\StageScene</Filter>
+    </ClInclude>
+    <ClInclude Include="Tile.h">
+      <Filter>Script\Tile</Filter>
+    </ClInclude>
+    <ClInclude Include="PotraitUI.h" />
+    <ClInclude Include="CarNpc.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="CarNPCState.h">
+      <Filter>Script\Character\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="CloudObject.h" />
+    <ClInclude Include="TargetBar.h">
+      <Filter>Script\UI\TargetBar</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

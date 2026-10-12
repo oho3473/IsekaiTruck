@@ -1,0 +1,232 @@
+#include "Police.h"
+#include "PoliceState.h"
+#include "FSM.h"
+
+#include "Transform.h"
+
+#include "DebugManager.h"
+
+Police::Police(Transform* playerTransform, Transform* policeTrasform) 
+	: m_curState()
+	, m_FSM()
+	, m_playerTransform(playerTransform)
+	, m_policeTrasnform(policeTrasform)
+	, m_police()
+	, m_redPolice()
+	, m_bluePolice()
+	, m_pathManager(nullptr)
+	, m_index(0)
+	, m_degree(0.f, 0.f)
+{
+	Init();
+}
+
+Police::~Police()
+{
+	delete m_FSM;
+	delete m_police; 
+	delete m_redPolice;
+	delete m_bluePolice;
+}
+
+void Police::Init()
+{
+	m_curState = State::Idle;
+	m_FSM = new FSM(new PoliceIdleState(this));
+}
+
+void Police::FixedUpdate()
+{
+
+}
+
+void Police::Update(float deltaTime)
+{
+	switch (m_curState)
+	{
+	case Police::State::Idle:
+		if (IsRecognizePlayer())
+		{
+			ChangeState(State::Chasing);
+		}
+		break;
+	case Police::State::Chasing:
+		if (!IsRecognizePlayer())
+		{
+			ChangeState(State::Idle);
+		}
+		break;
+	case Police::State::Collision:
+		break;
+	}
+
+	m_FSM->UpdateState();
+
+	static float time = 0;
+
+	time += deltaTime;
+	if (time > 1)
+	{
+		m_index++;
+		time = 0;
+	}
+
+	if (m_index >= 32)
+	{
+		m_index = 0;
+	}
+}
+
+void Police::LateUpdate()
+{
+
+}
+
+void Police::PreRender()
+{
+
+}
+
+void Police::Render(DirectY* directY)
+{
+	switch (m_curState)
+	{
+	case Police::State::Idle:
+		directY->DrawBitmap(m_police->GetSprite(m_index));
+
+		if (DebugManager::GetInstance().GetIsDebuging())
+		{
+			directY->DrawText(0, 40, 20, TextAlignMent::LEFT, L"Verdana", "%s", "Idle");
+		}
+		break;
+	case Police::State::Chasing:
+		if (m_index % 2 == 0)
+		{
+			//directY->DrawBitmap(m_bluePolice->GetSprite(m_index)); 
+			// 4방향 
+			if (m_degree.x > 0.f && m_degree.y > 0.f)
+			{
+				directY->DrawBitmap(m_bluePolice->GetSprite(4));
+			}
+			else if (m_degree.x < 0.f && m_degree.y > 0.f)
+			{
+				directY->DrawBitmap(m_bluePolice->GetSprite(12));
+			}
+			else if (m_degree.x < 0.f && m_degree.y < 0.f)
+			{
+				directY->DrawBitmap(m_bluePolice->GetSprite(20));
+			}
+			else if (m_degree.x > 0.f && m_degree.y < 0.f)
+			{
+				directY->DrawBitmap(m_bluePolice->GetSprite(28));
+			}
+		}
+		else if (m_index % 2 == 1)
+		{
+			//directY->DrawBitmap(m_redPolice->GetSprite(m_index));
+			// 4방향 
+			if (m_degree.x > 0.f && m_degree.y > 0.f)
+			{
+				directY->DrawBitmap(m_redPolice->GetSprite(4));
+			}
+			else if (m_degree.x < 0.f && m_degree.y > 0.f)
+			{
+				directY->DrawBitmap(m_redPolice->GetSprite(12));
+			}
+			else if (m_degree.x < 0.f && m_degree.y < 0.f)
+			{
+				directY->DrawBitmap(m_redPolice->GetSprite(20));
+			}
+			else if (m_degree.x > 0.f && m_degree.y < 0.f)
+			{
+				directY->DrawBitmap(m_redPolice->GetSprite(28));
+			}
+		}
+		if (DebugManager::GetInstance().GetIsDebuging())
+		{
+			directY->DrawText(0, 40, 20, TextAlignMent::LEFT, L"Verdana", "%s", "Chasing");
+		}
+		break;
+	case Police::State::Collision:
+		directY->DrawBitmap(m_police->GetSprite(m_index));
+		if (DebugManager::GetInstance().GetIsDebuging())
+		{
+			directY->DrawText(0, 40, 20, TextAlignMent::LEFT, L"Verdana", "%s", "Collision");
+		}
+		break;
+	}
+
+	m_FSM->RenderState(directY);
+}
+
+void Police::PostRender(DirectY* directY)
+{
+
+}
+
+void Police::Release()
+{
+
+}
+
+ElementType Police::GetElementType() const
+{
+	return ElementType::Script;
+}
+
+GameObject* Police::GetGameObject() const
+{
+	return m_gameObject;
+}
+
+void Police::SetGameObject(GameObject* gameObject)
+{
+	m_gameObject = gameObject;
+}
+
+void Police::ChangeState(State nextState)
+{
+	m_curState = nextState;
+	switch (m_curState)
+	{
+	case Police::State::Idle:
+		m_FSM->ChangeState(new PoliceIdleState(this));
+		break;
+	case Police::State::Chasing:
+		m_FSM->ChangeState(new PoliceChasingState(this));
+		break;
+	case Police::State::Collision:
+		m_FSM->ChangeState(new PoliceChasingState(this));
+		break;
+	default:
+		break;
+	}
+}
+
+bool Police::IsRecognizePlayer()
+{
+	// 일단은 거리로 대충 해놓기
+	int playerX = std::abs((int)m_playerTransform->GetScreenPosition().x);
+	int playerY = std::abs((int)m_playerTransform->GetScreenPosition().y);
+
+	int policeX = std::abs((int)m_policeTrasnform->GetScreenPosition().x);
+	int policeY = std::abs((int)m_policeTrasnform->GetScreenPosition().y);
+
+	int maxX = max(std::abs((int)m_playerTransform->GetScreenPosition().x), std::abs((int)m_policeTrasnform->GetScreenPosition().x));
+	int minX = min(std::abs((int)m_playerTransform->GetScreenPosition().x), std::abs((int)m_policeTrasnform->GetScreenPosition().x));
+
+	int maxY = max(std::abs((int)m_playerTransform->GetScreenPosition().y), std::abs((int)m_policeTrasnform->GetScreenPosition().y));
+	int minY = min(std::abs((int)m_playerTransform->GetScreenPosition().y), std::abs((int)m_policeTrasnform->GetScreenPosition().y));
+
+	// 자기 포지션도 가지고 있어야 함
+	if (maxX - minX < 1800 && maxY - minY < 1400)
+	{
+		return true;
+	}
+	return false;
+}
+
+bool Police::IsCollision()
+{
+	return false;
+}
