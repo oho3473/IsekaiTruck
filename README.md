@@ -1,9 +1,14 @@
 # IsekaiTruck
-<video src="https://www.youtube.com/watch?v=hW9AVIHDRXk" controls width="100%"></video>
+
+
+https://github.com/user-attachments/assets/c1f26cb5-2882-4346-9bbb-1a48dbe4ff0f
+
 
 여신의 성유물, 트럭을 운전하며, 용사 후보를 이세계로  전생시키는 게임입니다.
 
 ## 프로젝트 개요
+
+
 
 | 항목 | 내용 |
 | --- | --- |
@@ -31,7 +36,9 @@ Sprite Sheet를 기반으로 사용 이미지의 데이터를 만들어 애니�
 
 
 ### 2.  [Data 기반 대화 시스템](./GameProcess/MessageManager.h)
-<img width="426" height="240" alt="Video Project" src="https://github.com/user-attachments/assets/9a065c9c-dd0d-48af-bf5a-be5819ae15e5" /><br>
+<img width="426" height="240" alt="Video Project" src="https:/
+
+/github.com/user-attachments/assets/9a065c9c-dd0d-48af-bf5a-be5819ae15e5" /><br>
 기획자가 제공한 대사를 코드 수정없이 반영할 수 있있도록 CSV 기반 데이터 대화 시스템을 구현했습니다.<br>
 
 | 항목 | 내용 |
