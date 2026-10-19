@@ -47,7 +47,9 @@ Sprite Sheet를 기반으로 사용 이미지의 데이터를 만들어 애니�
 | [Queue를 활용한 대화 ](/GameProcess/MessageManager.h#L56) | 저장된 대사는 Queue에서 꺼내, UI에 전달 및 순차 출력되도록 구현 |
 
 ### 3. 2D 파티클
+<p align="center">
 <img width="426" height="240" alt="제목 없는 동영상 - Clipchamp로 제작 (7)" src="https://github.com/user-attachments/assets/93cb7fab-0adc-4280-9585-294ae78817ef" />
+</p>
 
 | 항목 | 내용 |
 | --- | --- |
