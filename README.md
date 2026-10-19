@@ -1,12 +1,7 @@
 # IsekaiTruck
+<img width="989" height="354" alt="image" src="https://github.com/user-attachments/assets/a6e32063-259d-46ff-af4e-ea0ea48a20e2" /><br>
 
-
-
-
-https://github.com/user-attachments/assets/d4c54c95-a2e0-4226-9d61-5157c9173d70
-
-주어진 단어를 조합하여 마법을 입력하며, 제한시간안에 적을 물리치는 게임입니다.<br>
-프로젝트에서 게임의 메인 루프와 타자입력처리를 구현했습니다.
+여신의 성유물, 트럭을 운전하며, 용사 후보를 이세계로  전생시키는 게임입니다.
 
 ## 프로젝트 개요
 
@@ -21,7 +16,7 @@ https://github.com/user-attachments/assets/d4c54c95-a2e0-4226-9d61-5157c9173d70
 ## 구현 상세
 
 ### 1. [Data 기반 Sprite Animation 시스템](.GameEngine/Animator.h)
-<img width="989" height="354" alt="image" src="https://github.com/user-attachments/assets/a6e32063-259d-46ff-af4e-ea0ea48a20e2" /><br><img width="426" height="240" alt="제목 없는 동영상 - Clipchamp로 제작 (8)" src="https://github.com/user-attachments/assets/2ad3608a-e215-458b-8345-06dff01e37d0" /><br>
+<img width="426" height="240" alt="제목 없는 동영상 - Clipchamp로 제작 (8)" src="https://github.com/user-attachments/assets/2ad3608a-e215-458b-8345-06dff01e37d0" /><br>
 Sprite Sheet를 기반으로 사용 이미지의 데이터를 만들어 애니메이션이 가능한 하나의 [Motion](.DirectY/Sprite.h#L83) 단위로 시스템을 구현했습니다.<br>
 <img width="1296" height="400" alt="image" src="https://github.com/user-attachments/assets/e2b88f7d-6f60-40a3-ac28-86cd59b2f402" />
 
