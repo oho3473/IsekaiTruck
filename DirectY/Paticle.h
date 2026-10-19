@@ -35,7 +35,6 @@ private:
 	float m_lifeTime;
 	MathEngine::Vector2 m_pos;
 
-	//test
 	float m_moveSpeed = 100;
 	float m_acceleration = 1;
 };
