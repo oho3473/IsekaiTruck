@@ -4,11 +4,11 @@
 
 #include "ElementBase.h"
 #include "../DirectY/Sprite.h"	//Motion
-#include "InputManager.h"	//keyinput¿¡ µû¸¥ ¸ğ¼Ç º¯°æÀ» À§ÇØ »ç¿ë
+#include "InputManager.h"	//keyinputì— ë”°ë¥¸ ëª¨ì…˜ ë³€ê²½ì„ ìœ„í•´ ì‚¬ìš©
 
 /// <summary>
-/// ¾Ö´Ï¸ŞÀÌ¼ÇÀ» ÀÌ·ç´Â Motion Å¬·¡½º¸¦ °ü¸®ÇÏ°í Àç»ıÇÒ Å¬·¡½º
-/// 2023.08.01 À¯½Â¿î
+/// ì• ë‹ˆë©”ì´ì…˜ì„ ì´ë£¨ëŠ” Motion í´ë˜ìŠ¤ë¥¼ ê´€ë¦¬í•˜ê³  ì¬ìƒí•  í´ë˜ìŠ¤
+/// 2023.08.01 ìœ ìŠ¹ìš´
 /// </summary>
 class Animator : public ElementBase
 {
@@ -33,11 +33,11 @@ public:
 	virtual GameObject* GetGameObject() const override;
 	virtual void SetGameObject(GameObject* gameObject) override;
 
-	//¸ğ¼ÇÀ» Ãß°¡ÇÑ´Ù
+	//ëª¨ì…˜ì„ ì¶”ê°€í•œë‹¤
 	void AddMotion(std::string motionName, Graphics::Motion* motion);
-	//ÇöÀç ¸ğ¼ÇÀ» ÁöÁ¤ÇÑ´Ù
+	//í˜„ì¬ ëª¨ì…˜ì„ ì§€ì •í•œë‹¤
 	void SetCurrentMotion(std::string motionName) { m_currentMotion = motionName; }
-	//¸ğ¼ÇÀ» ¹Ş¾Æ¿Â´Ù - const ¾²¸é [] ¾È½áÁü
+	//ëª¨ì…˜ì„ ë°›ì•„ì˜¨ë‹¤
 	Graphics::Motion* GetMotion(const std::string key)/*const*/ { return m_motionMap[key]; }
 
 
