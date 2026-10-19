@@ -21,7 +21,10 @@ https://github.com/user-attachments/assets/c1f26cb5-2882-4346-9bbb-1a48dbe4ff0f
 ## 구현 상세
 
 ### 1. [Data 기반 Sprite Animation 시스템](.GameEngine/Animator.h)
+
+<p align="center">
 <img width="426" height="240" alt="제목 없는 동영상 - Clipchamp로 제작 (8)" src="https://github.com/user-attachments/assets/2ad3608a-e215-458b-8345-06dff01e37d0" /><br>
+</p>
 Sprite Sheet를 기반으로 사용 이미지의 데이터를 만들어 애니메이션이 가능한 하나의 [Motion](.DirectY/Sprite.h#L83) 단위로 시스템을 구현했습니다.<br>
 <img width="1296" height="400" alt="image" src="https://github.com/user-attachments/assets/e2b88f7d-6f60-40a3-ac28-86cd59b2f402" />
 
