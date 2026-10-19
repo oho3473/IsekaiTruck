@@ -46,8 +46,15 @@ public:
 	std::queue<bool>& CheckNPCMessage() { return m_IsNPCMessage; }
 
 private:
-	std::unordered_map < int,std::unordered_map<std::string, std::string>> m_dialogs;
-	std::unordered_map < int,std::unordered_map<std::string, std::string>> m_messages;
+
+	struct DialogData
+	{
+    	std::string text;
+    	std::string speaker;
+	};
+
+	std::unordered_map<int, DialogData> m_dialogs;
+	std::unordered_map<int, std::vector<int>> m_messages;
 	std::queue<SkinHeadNPC*>* m_interviewQueue;
 
 	std::vector<bool> m_useMessage;
