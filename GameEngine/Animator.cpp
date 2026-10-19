@@ -25,34 +25,19 @@ void Animator::FixedUpdate()
 }
 
 /// <summary>
-/// ¾÷µ¥ÀÌÆ®ÇÏ¸é¼­ ¾î¶² ¸ğ¼ÇÀ» ¾µÁö ¼ÂÆÃÇØÁØ´Ù
+/// ì—…ë°ì´íŠ¸í•˜ë©´ì„œ ì–´ë–¤ ëª¨ì…˜ì„ ì“¸ì§€ ì…‹íŒ…í•´ì¤€ë‹¤
 /// </summary>
 /// <param name="deltaTime"></param>
 void Animator::Update(float deltaTime)
 {
-	//¹Ù²î¾ú´ÂÁö È®ÀÎÀ» À§ÇÑ ÀÌÀü ¸ğ¼ÇÀ» ÀúÀåÇÒ º¯¼ö
+	//ë°”ë€Œì—ˆëŠ”ì§€ í™•ì¸ì„ ìœ„í•œ ì´ì „ ëª¨ì…˜ì„ ì €ì¥í•  ë³€ìˆ˜
 	std::string prevMotion = m_currentMotion;
 
-	//Å×½ºÆ®¿ë
-	//Å°ÀÔ·Â¿¡ µû¶ó ¾î¶² »óÅÂÀÎÁö ¼ÂÆÃÇØ ¾î¶² ¸ğ¼ÇÀ» ¾µÁö Á¤ÇÑ´Ù
-	//if(InputManager::GetInstance().IsGetKeyDown(VK_UP/*test*/))
-	//{
-	//	if (prevMotion == m_currentMotion/*¹Ù²î¸é*/)
-	//	{
-	//		m_motionIndex = 0;	//¸ğ¼ÇÀÌ ¹Ù²î¸é¼­ ´Ù¸¥ ¾Ö´Ï¸ŞÀÌ¼Ç Ã³À½ºÎÅÍÇØ¾ßµÈ´Ù
-	//		m_currentMotion = "test";	//key°ªÀ» ¹Ù²Û´Ù
-	//	}
-	//}
-
 	int totalFrame = GetMotion(m_currentMotion)->GetTotalFrame();
-
-	//static float totalTime = 0;
-	//totalTime += deltaTime;
-
 	m_totalTime += deltaTime;
 
-	//½Ã°£ÀÌ ´©ÀûµÉ¶§¸¶´Ù Æ¯Á¤½Ã°£(delayTime)¸¶´Ù index¸¦ ¹Ù²ã ½ºÇÁ¶óÀÌÆ® ±³Ã¼
-	if (m_totalTime > m_delayTime/*GetMotion(m_currentMotion)->GetSprite(m_motionIndex)->m_delayTime*/)
+	//ì‹œê°„ì´ ëˆ„ì ë ë•Œë§ˆë‹¤ íŠ¹ì •ì‹œê°„(delayTime)ë§ˆë‹¤ indexë¥¼ ë°”ê¿” ìŠ¤í”„ë¼ì´íŠ¸ êµì²´
+	if (m_totalTime > m_delayTime)
 	{
 		if (m_motionIndex >= totalFrame-1)
 		{
@@ -79,7 +64,7 @@ void Animator::PreRender()
 
 void Animator::Render(DirectY* directY)
 {
-	// ¸¸¾à Å©·¹µ÷ ¾ÀÀÌ¶ó¸é
+	// ë§Œì•½ í¬ë ˆë”§ ì”¬ì´ë¼ë©´
 	SkinHeadNPC* temp = ((SkinHeadNPC*)(m_gameObject->GetElement(ElementType::Script)));
 
 	if (temp->GetCurState() == SkinHeadNPC::State::Credit)
@@ -92,7 +77,7 @@ void Animator::Render(DirectY* directY)
 
 void Animator::PostRender(DirectY* directY)
 {
-	//±×¸±°Å ´Ù ±×¸®°í ÀÌÆåÆ® °°Àº°Å
+	//ê·¸ë¦´ê±° ë‹¤ ê·¸ë¦¬ê³  ì´í™íŠ¸ ê°™ì€ê±°
 }
 
 void Animator::Release()
@@ -120,11 +105,11 @@ void Animator::SetGameObject(GameObject* gameObject)
 }
 
 /// <summary>
-/// ÀúÀåµÈ ¸ğ¼ÇÀ» ¾Ö´Ï¸ŞÀÌÅÍ¿¡ ÀúÀåÇÑ´Ù
-/// ¹İµå½Ã ±×·¡ÇÈ½º¿£Áø¿¡¼­ ReadTextFileÇÔ¼ö·Î ¸ğ¼Ç¿¡ sprite ÀúÀåÇÑ motionÀ» ¾µ °Í
+/// ì €ì¥ëœ ëª¨ì…˜ì„ ì• ë‹ˆë©”ì´í„°ì— ì €ì¥í•œë‹¤
+/// ë°˜ë“œì‹œ ê·¸ë˜í”½ìŠ¤ì—”ì§„ì—ì„œ ReadTextFileí•¨ìˆ˜ë¡œ ëª¨ì…˜ì— sprite ì €ì¥í•œ motionì„ ì“¸ ê²ƒ
 /// </summary>
-/// <param name="motionName">key °ª</param>
-/// <param name="motion">value °ª</param>
+/// <param name="motionName">key ê°’</param>
+/// <param name="motion">value ê°’</param>
 void Animator::AddMotion(std::string motionName, Graphics::Motion* motion)
 {
 	m_motionMap.insert({ motionName, motion });
