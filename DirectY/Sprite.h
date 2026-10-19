@@ -5,10 +5,10 @@
 
 namespace Graphics
 {
-	//±âº» µµÇü
+	//ê¸°ë³¸ ë„í˜•
 	namespace BaseFigure
 	{
-		//»ç°¢Çü
+		//ì‚¬ê°í˜•
 		struct Rectangle
 		{
 			float left;
@@ -17,7 +17,7 @@ namespace Graphics
 			float bottom;
 		};
 
-		//¼±
+		//ì„ 
 		struct Line
 		{
 			float startX;
@@ -26,7 +26,7 @@ namespace Graphics
 			float endY;
 		};
 
-		//¿ø
+		//ì›
 		struct Circle
 		{
 			float centerX;
@@ -35,7 +35,7 @@ namespace Graphics
 			float radius;
 		};
 
-		//Å¸¿ø
+		//íƒ€ì›
 		struct Ellipse
 		{
 			float centerX;
@@ -51,7 +51,7 @@ namespace Graphics
 			float y;
 		};
 
-		//isomatric ¹Ù´ÚÀÇ Á¡ À§Ä¡¸¦ °®°í ÀÖ´Â ±¸Á¶Ã¼
+		//isomatric ë°”ë‹¥ì˜ ì  ìœ„ì¹˜ë¥¼ ê°–ê³  ìˆëŠ” êµ¬ì¡°ì²´
 		struct IsomatricTile
 		{
 			Graphics::BaseFigure::Point centerXY;
@@ -61,17 +61,17 @@ namespace Graphics
 
 	}
 
-	//sprite ÇÏ³ª ÇÏ³ªÀÇ Á¤º¸¸¦ ´ãÀ» ±¸Á¶Ã¼
+	//sprite í•˜ë‚˜ í•˜ë‚˜ì˜ ì •ë³´ë¥¼ ë‹´ì„ êµ¬ì¡°ì²´
 	struct Sprite
 	{
-		std::string m_name;	//ÀÌ¸§
-		int m_index;	//¾Ö´Ï¸ŞÀÌ¼Ç ÀüÃ¼¿¡¼­ ¸î¹øÂ°ÀÎÁö ÀÎµ¦½º
-		float m_delayTime;	//¸ğ¼Ç µô·¹ÀÌ ½Ã°£
-		ID2D1Bitmap* m_image;	//ÀÌ¹ÌÁö
-		D2D1_RECT_F m_drawSize;	//±×¸± ÀÌ¹ÌÁö »çÀÌÁî
-		D2D1_RECT_F m_drawArea;	//ÀÌ¹ÌÁö ³»ºÎ¿¡ ¾î´À ºÎºĞÀ» ±×¸±Áö
-		D2D1_POINT_2F m_drawPos;	//ÀÌ¹ÌÁö¸¦ ¾î´À À§Ä¡¿¡ ±×¸±Áö
-		D2D1_POINT_2F m_pivot = {0.5,0.5};	//°­±Ô¼®ÀÇ ÅØ½ºÆ® ÆÄÀÏÀ» ¹Ş¾Æ ±×¸± ÀÌ¹ÌÁö »çÀÌÁî(drawSize)ÀÇ °¡·Î,¼¼·Î °ªÀ» °öÇØ ½ÇÁ¦ Å©±âÀÇ pivotÀ» ÁöÁ¤ÇØÁà¾ßÇÑ´Ù
+		std::string m_name;	//ì´ë¦„
+		int m_index;	//ì• ë‹ˆë©”ì´ì…˜ ì „ì²´ì—ì„œ ëª‡ë²ˆì§¸ì¸ì§€ ì¸ë±ìŠ¤
+		float m_delayTime;	//ëª¨ì…˜ ë”œë ˆì´ ì‹œê°„
+		ID2D1Bitmap* m_image;	//ì´ë¯¸ì§€
+		D2D1_RECT_F m_drawSize;	//ê·¸ë¦´ ì´ë¯¸ì§€ ì‚¬ì´ì¦ˆ
+		D2D1_RECT_F m_drawArea;	//ì´ë¯¸ì§€ ë‚´ë¶€ì— ì–´ëŠ ë¶€ë¶„ì„ ê·¸ë¦´ì§€
+		D2D1_POINT_2F m_drawPos;	//ì´ë¯¸ì§€ë¥¼ ì–´ëŠ ìœ„ì¹˜ì— ê·¸ë¦´ì§€
+		D2D1_POINT_2F m_pivot = {0.5,0.5};	//ê°•ê·œì„ì˜ í…ìŠ¤íŠ¸ íŒŒì¼ì„ ë°›ì•„ ê·¸ë¦´ ì´ë¯¸ì§€ ì‚¬ì´ì¦ˆ(drawSize)ì˜ ê°€ë¡œ,ì„¸ë¡œ ê°’ì„ ê³±í•´ ì‹¤ì œ í¬ê¸°ì˜ pivotì„ ì§€ì •í•´ì¤˜ì•¼í•œë‹¤
 
 		Sprite(const std::string& name, const int& index, const float& delayTime, ID2D1Bitmap*& image, const D2D1_RECT_F& drawSize, const D2D1_RECT_F drawArea, const D2D1_POINT_2F& drawPos, const D2D1_POINT_2F& pivot)
 			: m_name(name), m_index(index),m_delayTime(delayTime),m_image(image)
@@ -80,7 +80,7 @@ namespace Graphics
 		}
 	};
 
-	//sprtie¹­¾î ÇÏ³ªÀÇ ¸ğ¼ÇÀ¸·Î °ü¸®ÇÏ±âÀ§ÇÑ Å¬·¡½º
+	//sprtieë¬¶ì–´ í•˜ë‚˜ì˜ ëª¨ì…˜ìœ¼ë¡œ ê´€ë¦¬í•˜ê¸°ìœ„í•œ í´ë˜ìŠ¤
 	class Motion
 	{
 	public:
@@ -95,7 +95,6 @@ namespace Graphics
 		std::string GetName() const { return m_name; }
 		int GetTotalFrame() const { return m_totalFrame; }
 
-		//test
 		void SetImage(ID2D1Bitmap*& image)
 		{
 			static int index = 0;
@@ -114,9 +113,9 @@ namespace Graphics
 		}
 
 	private:
-		std::string m_name;	//ÀÌ¸§
-		std::vector<Sprite*> m_spriteArray;	//¸ğ¼Ç ÇÏ³ª
-		int m_totalFrame;	//¾Ö´Ï¸ŞÀÌ¼Ç ÀüÃ¼ ÇÁ·¹ÀÓ ¼ö
+		std::string m_name;	//ì´ë¦„
+		std::vector<Sprite*> m_spriteArray;	//ëª¨ì…˜ í•˜ë‚˜
+		int m_totalFrame;	//ì• ë‹ˆë©”ì´ì…˜ ì „ì²´ í”„ë ˆì„ ìˆ˜
 
 		void ResizeMotion();
 	};
