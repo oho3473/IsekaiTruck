@@ -1,5 +1,7 @@
 # IsekaiTruck
-[![영상 제목](https://img.youtube.com/vi/c6hcUonVZ-OqKZji/0.jpg)](https://www.youtube.com/watch?v=c6hcUonVZ-OqKZji)
+[![영상 제목](https://img.youtube.com/vi/hW9AVIHDRXk/0.jpg)](https://www.youtube.com/watch?v=hW9AVIHDRXk)
+
+
 
 여신의 성유물, 트럭을 운전하며, 용사 후보를 이세계로  전생시키는 게임입니다.
 
