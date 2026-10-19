@@ -39,7 +39,9 @@ Sprite Sheet를 기반으로 사용 이미지의 데이터를 만들어 애니�
 
 
 ### 2.  [Data 기반 대화 시스템](./GameProcess/MessageManager.h)
+<p align="center">
 <img width="426" height="240" alt="Video Project" src="https://github.com/user-attachments/assets/9a065c9c-dd0d-48af-bf5a-be5819ae15e5" /><br>
+</p>
 기획자가 제공한 대사를 코드 수정없이 반영할 수 있있도록 CSV 기반 데이터 대화 시스템을 구현했습니다.<br>
 
 | 항목 | 내용 |
